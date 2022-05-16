@@ -4,7 +4,6 @@ import { createRenderer } from 'vue'
 
 const readerer = createRenderer<Container, Container>({
     createElement(type) {
-        console.log(111, type)
         let element
         switch (type) {
             case "Container":
@@ -25,6 +24,11 @@ const readerer = createRenderer<Container, Container>({
                 (el as Sprite).texture = Texture.from(nextValue)
                 break
             default:
+                if (key === 'x') {
+                    el.x = nextValue;
+                } else {
+                    el.y = nextValue;
+                }
                 break
         }
     },

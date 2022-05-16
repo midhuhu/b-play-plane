@@ -4,4 +4,6 @@ import { game } from './game'
 import { createApp } from './runtime-cavans'
 
 
-createApp(App).mount(game.stage)
+const app = createApp(App)
+
+app.mount(game.stage)

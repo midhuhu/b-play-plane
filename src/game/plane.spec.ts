@@ -30,4 +30,9 @@ describe('Plane', () => {
             expect(plane.x).toBe(1)
         })
     })
+    describe('攻击', () => {
+        it('attack', () => {
+            const plane = setupPlane({}, {})
+        })
+    })
 })

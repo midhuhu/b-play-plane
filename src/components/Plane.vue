@@ -5,7 +5,7 @@
 </template>
 
 <script setup lang="ts">
-import planeImg from '../assets/plane.png'
+import planeImg from '../assets/plane2.png'
 
 import { reactive } from 'vue';
 import { setupPlane } from '../game';

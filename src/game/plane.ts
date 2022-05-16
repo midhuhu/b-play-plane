@@ -8,8 +8,8 @@ export interface Plane {
 }
 
 const defaultOptions = {
-    x: 0,
-    y: 0,
+    x: 180,
+    y: 660,
     speed: 10
 }
 export function setupPlane(plane: any, options?: any): Plane {

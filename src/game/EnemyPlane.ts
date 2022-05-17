@@ -1,7 +1,9 @@
 export class EnemyPlane {
-    public x: number = 0;
+    public x: number = 180;
     public y: number = 0;
     public speed: number = 5;
+    public width: number = 125;
+    public height: number = 125;
     constructor() {
 
     }

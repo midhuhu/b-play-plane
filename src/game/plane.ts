@@ -1,4 +1,5 @@
-import Bullet from "./bullet";
+import { Bullet } from "./Bullet";
+import { EnemyPlane } from "./EnemyPlane";
 
 export interface Plane {
     x: number;
@@ -56,7 +57,7 @@ function initAttack(plane: Plane, bullets: Bullet[]) {
     }
 }
 // plane init
-export function setupPlane(plane: any, bullets: Bullet[] = [], options?: any): Plane {
+export function setupPlane(plane: any, bullets: Bullet[], options?: {}): Plane {
     plane.bullets = bullets
     Object.assign(plane, defaultOptions, options)
 

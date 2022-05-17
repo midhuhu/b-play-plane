@@ -1,6 +1,7 @@
 import { expect, it, describe } from 'vitest'
-import Bullet from './bullet'
-import { setupPlane } from './plane'
+import { Bullet } from './Bullet'
+import { EnemyPlane } from './EnemyPlane'
+import { setupPlane } from './Plane'
 
 describe('Plane', () => {
     describe('move', () => {
@@ -30,13 +31,14 @@ describe('Plane', () => {
         })
         it('moveRight', () => {
             const plane = createPlane()
+            plane.x = 0
             plane.moveRight()
             expect(plane.x).toBe(1)
         })
     })
     describe('攻击', () => {
         it('attack', () => {
-            const bullets: string | any[] | undefined = []
+            const bullets: [] = []
             const plane = setupPlane({}, bullets, {})
             plane.attack()
             expect(bullets.length).toBe(1)
@@ -51,7 +53,7 @@ describe('Plane', () => {
             expect(bullet.y).not.toBe(0)
         })
         it('remove bullet', () => {
-            const bullets: string | any[] | undefined = []
+            const bullets: [] = []
             const plane = setupPlane({}, bullets, { x: 0, y: 0 })
             plane.attack()
             plane.run()

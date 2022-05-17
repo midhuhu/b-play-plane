@@ -1,5 +1,5 @@
 import { expect, it, describe, vi } from 'vitest'
-import Bullet from './bullet'
+import { Bullet } from './Bullet'
 
 describe('Bullet', () => {
     it('move', () => {

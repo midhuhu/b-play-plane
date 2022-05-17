@@ -5,8 +5,7 @@
 </template>
 
 <script setup lang="ts">
-import planeImg from '../assets/plane2.png'
-
+import planeImg from '../assets/plane.png'
 import { PropType } from 'vue';
 import { Plane } from '../game';
 

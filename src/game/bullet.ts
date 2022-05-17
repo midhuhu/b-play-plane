@@ -4,8 +4,8 @@ export class Bullet {
     public speed: number = 5;
     public border: number = 0;
     public onDestory: any;
-    public width: number = 25;
-    public height: number = 25;
+    public width: number = 10;
+    public height: number = 10;
 
     constructor() { }
     // bullet move

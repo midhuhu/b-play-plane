@@ -1,9 +1,9 @@
 export class EnemyPlane {
     public x: number = 180;
     public y: number = 0;
-    public speed: number = 5;
-    public width: number = 125;
-    public height: number = 125;
+    public speed: number = 1;
+    public width: number = 80;
+    public height: number = 80;
     constructor() {
 
     }
@@ -13,8 +13,12 @@ export class EnemyPlane {
 }
 
 export function initEnemyPlanes(enemyPlanes: EnemyPlane[]) {
-    const enemy = new EnemyPlane()
-    enemyPlanes.push(enemy)
+    setInterval(() => {
+        const enemy = new EnemyPlane()
+        enemy.x = Math.random() * 400
+        enemy.y = -10
+        enemyPlanes.push(enemy)
+    }, 1000)
 }
 
 export function runEnemyPlanes(enemyplanes: EnemyPlane[]) {

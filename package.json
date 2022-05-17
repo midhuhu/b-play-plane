@@ -9,6 +9,7 @@
     "test": "vitest"
   },
   "dependencies": {
+    "less": "^4.1.2",
     "pixi.js": "^6.3.0",
     "vue": "^3.2.25"
   },

@@ -9,7 +9,7 @@ import { PropType } from 'vue';
 import bulletImg from '../assets/bullet.png'
 import { Bullet } from '../game';
 
-const bullet = defineProps({
+defineProps({
     bullet: {
         type: Object as PropType<Bullet>,
         required: true,

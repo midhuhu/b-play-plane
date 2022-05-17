@@ -1,4 +1,4 @@
-import { expect, it, describe } from 'vitest'
+import { expect, it, describe, vi } from 'vitest'
 import { EnemyPlane, initEnemyPlanes, runEnemyPlanes } from './EnemyPlane'
 
 describe('EnemyPlane', () => {
@@ -11,9 +11,13 @@ describe('EnemyPlane', () => {
     })
 
     it('initEnemyPlanes', () => {
+        vi.useFakeTimers()
         const enemyPlanes: EnemyPlane[] = []
         initEnemyPlanes(enemyPlanes)
-        expect(enemyPlanes.length).toBe(1)
+        // 1000ms later
+        vi.advanceTimersByTime(2000)
+        expect(enemyPlanes.length).toBe(2)
+        vi.resetAllMocks()
     })
     it('runEnemyPlanes', () => {
         const enemy = new EnemyPlane()

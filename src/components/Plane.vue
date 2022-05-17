@@ -21,16 +21,16 @@ window.addEventListener('keydown', e => {
         plane.attack();
     }
     switch (e.code) {
-        case "ArrowLeft":
+        case "KeyA":
             plane.moveLeft();
             break
-        case "ArrowRight":
+        case "KeyD":
             plane.moveRight();
             break
-        case "ArrowUp":
+        case "KeyW":
             plane.moveUp();
             break
-        case "ArrowDown":
+        case "KeyS":
             plane.moveDown();
             break
         default:
